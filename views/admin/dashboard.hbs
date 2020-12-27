@@ -1,0 +1,56 @@
+
+<style>
+.notfound{
+  display: none;
+}
+</style>
+<div class="container mt-5">
+    <div class="row mt-5">
+        {{!-- <input type='text' id='txt_searchall' placeholder='Enter search text'> --}}
+{{!-- <input type='text' id='txt_name' placeholder='Enter search name'> --}}
+
+        <table class="table" >
+    <thead>
+        <tr>
+            <th class="text-center">#</th>
+            <th>Name</th>
+            <th>Email Id</th>
+            <th>City</th>
+            <th class="text-right">Address</th>
+            <th class="text-right">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        
+
+        <tr>
+            <td class="text-center number" style="text-align: center;"></td>
+         
+            <td>{{username}}</td>
+            <td>{{email}}</td>
+            <td>{{city}}</td>
+            <td class="text-right">{{address}}</td>
+            <td class="td-actions text-right">
+                
+         
+
+
+                 
+                <a href="/admin/edit_users/{{_id}}"  rel="tooltip" class="btn btn-success btn-sm btn-icon">
+                    <i class="tim-icons icon-settings"></i>
+                </a>
+                </form>
+                {{!-- <form action=""> --}}
+                <a href="/admin/delete_user/{{_id}}" type="button" rel="tooltip" class="btn btn-danger btn-sm btn-icon">
+                    <i class="tim-icons icon-simple-remove"></i>
+                </a>
+                {{!-- </form> --}}
+            </td>
+        </tr>
+       
+        {{/each}}
+    </tbody>
+</table>
+    </div>
+</div>
